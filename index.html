@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVONEX</title>
+
+<!-- bootstarp -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- FontAwesome -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+    integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+          <!-- AOS  -->
+          <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        
+
+</head>
+<style>
+  body {
+    background-color: #f2c6a0;
+    /* Skin color */
+    overflow-x: hidden;
+    /* Prevent scroll bars */
+    margin: 0;
+    height: 100vh;
+    position: relative;
+    transition: background-color 1s;
+    /* Smooth transition for background color */
+}
+
+.navbar {
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.content {
+    position: relative;
+    color: white;
+    animation: text 3s 1 forwards;
+}
+@keyframes text {
+    from{
+        z-index: 1;
+    }
+    to{
+        z-index: -1;
+    }
+    
+}
+
+.overlay {
+    position: fixed;
+    top: 0;  
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: transform 2.5s;
+    /* Smooth transition for overlay movement */
+    transform: scaleX(1);
+    transform-origin: left;
+    z-index: 1;
+}
+
+.overlay.hide {
+    transform: scaleX(0);
+    /* Slide out effect */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    font-weight: bolder;
+   
+}
+
+.fade-in-1 {
+    transition-delay: 1s;
+    /* Delay for the first component */
+}
+
+.fade-in-2 {
+    transition-delay: 2s;
+    /* Delay for the second component */
+}
+
+
+.fade-in-3 {
+    transition-delay: 2s;
+    /* Delay for the third component */
+}
+
+.brand {
+    position: fixed;
+    font-size: 17vh;
+    max-width: fit-content;
+    margin-left: 21%;
+
+}
+
+.image-height {
+    margin-top: 10%;
+    height: 25em;
+}
+.imgparti{
+    margin-top: 10%;
+    height: 25em;
+    overflow: visible;
+}
+#catagory img{
+    transition: 1s;
+}
+#catagory img:hover{
+transform: scale(.9);
+}
+footer{
+    z-index: 10000;
+    display: block;
+  }
+  a:hover{
+          color: rgb(22, 14, 106) !important;
+        font-weight: 500;
+        filter: drop-shadow(0 0 10px aqua);
+
+}
+</style>
+<body>
+      <div class="overlay"></div>
+      <div class="content container text-center ">
+         
+    <!-- navbar -->
+    <header>
+      <nav style=" color: black;" class=" fade-in fade-in-1 navbar text-center  navbar-expand-lg bg-body-tertiary me-3">
+        <div class="container-fluid">
+          <div class="me-auto " >
+          <a class="navbar-brand me-auto" href="#">LEVONEX</a> 
+          
+
+            <button class="navbar-toggler" type="button" data-bs-target="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+  
+          </div>
+  
+          
+          <!-- dropdown -->
+      <div class=" height-auto   p-2  collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-2 mb-2 mb-lg-0 dropdown">
+  
+            <li class="nav-item   ">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item " href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">link</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+  
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item " href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">link</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+  
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Collections
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item " href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">link</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+  
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Feature
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item " href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">link</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+  
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                The shop
+              </a>  
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item " href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">link</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            
+          </ul>  
+      </div>
+    </nav>
+    </header>
+    <!-- search bar -->
+
+  <form class=" fade-in fade-in-2 d-flex mx-5 mt-2" role="search">
+<input class=" form-control  me-2 " type="search" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success  me-auto" type="submit">Search</button>
+</form>
+<h1 class="me-auto mt-5 brand" >LEVONEX</h1>
+</div>
+</div>
+
+    <main >
+      <section>
+        <div id="catagory" class="row ">
+          <div class="col-sm">
+              <div  data-aos="fade-down"  data-aos-easing="linear"  data-aos-duration="2000" data-aos-delay="1500">
+                 <a href="womens2.html"> <img class="img-fluid mx-5  imgparti" src="RESOURCES/pica.jpg" alt=""></a>
+                  <p class=" mx-5">WOMEN FASHION </p>
+              </div>
+          </div>
+          <div class="col-sm">
+              <div data-aos="zoom-in"  data-aos-easing="linear"  data-aos-duration="2000" data-aos-delay="2000">
+                 <a href=""> <img style="margin-top: 95px;" class="img-fluid mx-5  image-height " src="RESOURCES/pi.jpg" alt=""></a>
+                  <p class=" mx-5">COUPLE SET'S </p>
+              </div>
+          </div>
+          <div class="col-sm">
+              <div data-aos="fade-down"  data-aos-easing="linear"  data-aos-duration="2000" data-aos-delay="2500">
+                 <a href="mens.html"> <img class="img-fluid mx-5   imgparti" src="RESOURCES/pic.jpg" alt=""></a>
+                  <p class=" mx-5">MEN'S  FASHION </p>
+              </div>
+          </div>
+      </div>   
+    </main>
+    <footer class="p-5  my-3 text-center text-white container-fluid bg-dark mb-0">
+
+      <p>&copy; Rights Reserved.</p>
+   
+         <a href="https://github.com/kashinwar" target="_blank"  class=" text-white mx-2"><i class="fa-brands fa-github fa-2x"></i></a>
+         <a href="" class=" text-white mx-2"><i class="fa-brands fa-instagram fa-2x"></i></a>
+         <a href="https://www.linkedin.com/in/shivani-kashinwar-532363266/" target="_blank" class=" text-white mx-2"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+        
+         <hr>
+         <h5>Design & Develop by : Shivani Singh</h5>
+   
+    
+   </footer>
+
+</body>
+
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+  window.addEventListener('load', function() {
+      var overlay = document.querySelector('.overlay');
+      var contentElements = document.querySelectorAll('.fade-in');
+
+      // Start the sliding effect and prepare for fading in
+      overlay.classList.add('hide');
+
+      // Trigger color change and start fading in other elements
+      setTimeout(function() {
+          document.body.style.backgroundColor = '#f2c6a0'; // Skin color
+          document.querySelector('.content').style.color = 'black'; // Text color
+          contentElements.forEach(el => el.classList.add('visible'));
+      }, 1000); // Short delay to ensure styles are applied correctly
+  });
+</script>
+</html>

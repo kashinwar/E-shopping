@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women</title>
+</head>
+<!-- bootstarp -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- FontAwesome -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+    integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- AOS  -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<style>
+     body {
+        margin: 0;
+        overflow-x: hidden;
+        background-color: #f2c6a0;
+
+    }
+    .navbar {
+        background-color: #eeaf79;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+    
+    }
+
+    .form-control {
+        width: 200px;
+    }
+
+    .brand {
+        position: fixed;
+        font-size: 7rem;
+        max-width: fit-content;
+        padding: 13.8%;
+        opacity: 0.7;
+        margin-left: 20%;
+        z-index: -1;
+    }
+
+.carousel {
+            position: relative;
+            width: 100%;
+            height: 500px; /* Set the height of the carousel */
+            overflow: hidden;
+        }
+        
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .carousel-item {
+            position: relative;
+            display: none;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+        }
+        
+        .carousel-item.active {
+            display: block;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Add some basic styling to our navigation buttons */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        .carousel-button:hover {
+            background-color: #ddd;
+        }
+        
+        .carousel-button.prev {
+            left: 10px;
+        }
+        
+        .carousel-button.next {
+            right: 10px;
+        }
+
+    .rated{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        
+    }
+    .imges{
+        background-color: bisque; 
+        height: 65vh;
+        /* margin-inline-start: 5%; */
+        padding: 5%;
+    }
+    .MK{
+        background-image: linear-gradient(rgba(255, 192, 203, 0.774),rgba(7, 7, 137, 0.807)) ,url(RESOURCES/shirt/6.jpg);
+        width: 30vw;
+        /* margin: 20px; */
+        text-align: center;
+        padding: 0%;
+    }
+    .flex{
+     display: flex;
+     text-align: center;
+     /* margin: 20px; */
+     padding: 1%;
+    }
+    .flex>img{
+        height: 55vh;
+    }
+    .flex+div{
+        background-color:pink ;
+    }
+    .text{
+        font-size: 3vi;
+    }
+    .OFF{
+        font-size: 5vi;
+    }
+    .access{
+        background-image: linear-gradient(pink,blue,green,yellow);
+        padding: 2%;
+    }
+    a:hover{
+          color: rgb(22, 14, 106) !important;
+        font-weight: 500;
+        filter: drop-shadow(0 0 10px aqua);
+        
+
+}
+</style>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark  mt-0">
+        <a class="navbar-brand font-weight-bold mx-5" style="font-size: 30px;" href="#">Lenovex </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex m-auto me-3">
+                <input class="form-control mr-sm-2 mx-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <i class="fa-solid fa-search">Search</i>
+                </button>
+                <div class="icons ">
+                    <a href=""><i class="fa-solid fa-heart text-danger mx-3 navbar-brand">fav</i></a>
+                    <a href=""><i class="fa-solid fa-shopping-basket mx-3 navbar-brand">cart</i></a>
+                    <a href="index.html"> <i class="fa-solid fa-home mx-3 navbar-brand">home</i></a>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <h1 class="me-auto mt-5 brand">LEVONEX</h1>
+</header>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="RESOURCES/bk.jpeg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="RESOURCES/bki.jpeg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="RESOURCES/bk.jpeg" alt="">
+            </div>
+        </div>
+        <button class="carousel-button prev">Prev</button>
+        <button class="carousel-button next">Next</button>
+    </div>
+
+  
+
+    <section>
+        <h5>HIGHLY RATED</h5>
+        <h3>EXCLUSIVE PRODUCTS</h3>
+        <div class="rated">
+            <div data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
+                <a  href="jumpsuit.html">
+                  <img class="imges" src="RESOURCES/jump/jumpsuit.jpeg" alt="">
+                 <p>JUMP SUITS</p>
+                 <p>Staring from $23</p>
+                </a>
+         
+             </div>
+             <div data-aos="fade-down"
+             data-aos-easing="linear"
+             data-aos-duration="2000">
+                 <a href="jeans.html">
+                     <img class="imges" src="RESOURCES/jeans/jeans.jpeg" alt="">
+                     <p>Jeans</p>
+                     <p>Staring from $23</p>
+                       </a>
+         
+             </div>
+             <div data-aos="fade-down"
+             data-aos-easing="linear"
+             data-aos-duration="2500">
+                 <a href="playsuit.html">
+                     <img class="imges" src="RESOURCES/Play/playsuit.jpeg" alt="">
+                     <p>PlaySuits</p>
+                     <p>Staring from $23</p>
+                       </a>
+         
+             </div>
+             <div data-aos="fade-down"
+             data-aos-easing="linear"
+             data-aos-duration="3000">
+                 <a href="coasts&jacket.html">
+                     <img class="imges" src="RESOURCES/coat/coats.jpeg" alt="">
+                     <p>Coats & Jacket</p>
+                     <p>Staring from $23</p>
+                       </a>
+         
+             </div>
+     
+     
+        </div>
+    </section>
+    <section>
+        <div class="flex">
+            <div>
+                <div class="flex">
+                    <div class="flex">
+                        <img src="RESOURCES/131.jpg" alt="">
+                       <div >
+                        <p >TOP BRANDS</p>
+                        <p class="text">SUMMER OFFERS</p>
+                        <h2 class="OFF">20%</h2>
+                        <a href="">Explore now</a>
+                       </div>
+                    </div>
+                    <div class="MK">
+                        <p>TOP BRANDS</p>
+                        <p  class="text"> SALE UPTO</p>
+                        <h2 class="OFF">50% OFF</h2>
+                        <a href="">Explore now</a>
+
+                    </div>
+                </div>
+                <div class="access">
+                    <p>The Jennie beauty brand</p>
+                    <p class="text">Long Wearing Cosmetic</p>
+                    <a href="">Explore now</a>
+                </div>
+            </div>
+            <div class="">
+                   <img src="RESOURCES/102.jpg" alt="">
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    AOS.init();
+  </script>
+<script>
+    // Get our carousel elements
+    const carousel = document.querySelector('.carousel');
+    const carouselInner = document.querySelector('.carousel-inner');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+
+    // Set the current slide index
+    let currentIndex = 0;
+
+    // Add event listeners to our navigation buttons
+    prevButton.addEventListener('click', () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = carouselItems.length - 1;
+        }
+        updateCarousel();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex >= carouselItems.length) {
+            currentIndex = 0;
+        }
+        updateCarousel();
+    });
+
+    // Update the carousel based on the current index
+    function updateCarousel() {
+        carouselItems.forEach((item, index) => {
+            item.classList.remove('active');
+            if (index === currentIndex) {
+                item.classList.add('active');
+            }
+        });
+    }
+</script>
+</html>

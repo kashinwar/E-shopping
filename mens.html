@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens fashion</title>
+</head>
+<!-- bootstarp -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- FontAwesome -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+    integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- AOS  -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<style>
+  body{
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("RESOURCES/pic.jpg"); */
+    background-color: #f2c6a0;
+   
+  }
+  .carousel {
+    float: left;
+    display: flex;
+    max-width: max-content;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    animation: moveLeft 55s linear infinite 1s;
+  }
+
+  .carousel:hover {
+    animation-play-state: paused;
+  }
+
+  .carousel img {
+    max-width: max-content;
+    height: 35vh;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .carousel2 {
+    max-height: max-content;
+    /* background-color: blue; */
+    float: right;
+    display: flex;
+    max-width: max-content;
+    gap: 20px;
+    animation: moveRight 55s linear infinite 1s;
+  }
+  .carousel2:hover {
+    animation-play-state: paused;
+  }
+
+  .carousel2 img {
+    width: max-content;
+    height: 35vh;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+header{
+  height: 70px;
+}
+ 
+   /* Make the navbar fixed top */
+   .navbar {
+    background-color: #eeaf79;
+   /* position: fixed; */
+        top: 0;
+        width: 100%;
+  z-index: 10000;
+
+    }
+
+    /* Style the search bar and icons */
+    
+
+    .form-control {
+        width: 200px;
+    }
+
+  
+
+    /* Media query for small screens */
+    @media (max-width: 768px) {
+        .form-inline {
+            flex-direction: column;
+        }
+
+        .form-control {
+            width: 100%;
+        }
+
+        .icons {
+            margin-top: 1rem;
+        }
+    }
+    .brand {
+    position: fixed;
+    font-size: 7rem;
+    max-width: fit-content;
+    padding: 13.8%;
+    opacity: 0.7;
+    margin-left: 20%;
+
+
+}
+a:hover{
+          color: rgb(22, 14, 106) !important;
+        font-weight: 500;
+        filter: drop-shadow(0 0 10px aqua);
+
+}
+</style>
+</style>
+<body >
+  <header >
+    <nav class="navbar navbar-expand-lg navbar-dark  mt-0">
+      <a class="navbar-brand font-weight-bold mx-5" style="font-size: 30px;" href="#">Lenovex </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex m-auto me-3">
+              <input class="form-control mr-sm-2 mx-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                  <i class="fa-solid fa-search">Search</i>
+              </button>
+              <div class="icons ">
+                  <a href=""><i class="fa-solid fa-heart text-danger mx-3 navbar-brand">fav</i></a>
+                  <a href=""><i class="fa-solid fa-shopping-basket mx-3 navbar-brand">cart</i></a>
+                  <a href="index.html"> <i class="fa-solid fa-home mx-3 navbar-brand">home</i></a>
+              </div>
+          </form>
+      </div>
+  </nav>
+  <h1 class="me-auto mt-5 brand" >LEVONEX</h1>
+  </header>
+<section class=" my-1">
+  <h1 class="text-uppercase fw-bold text-decoration-underline mx-5">shirt</h1>
+    <div class="carousel ">
+    <img src="RESOURCES/shirt/1.jpg" alt="Image 1">
+    <img src="RESOURCES/shirt/2.jpg" alt="Image 2">
+    <img src="RESOURCES/shirt/3.jpg" alt="Image 3">
+    <img src="RESOURCES/shirt/5.jpg" alt="Image 4">
+    <img src="RESOURCES/shirt/7.jpg" alt="Image 5">
+    <img src="RESOURCES/shirt/8.jpg" alt="Image 6">
+    <img src="RESOURCES/shirt/9.jpg" alt="Image 7">
+    <img src="RESOURCES/shirt/8.jpg" alt="Image 8">
+    <img src="RESOURCES/shirt/9.jpg" alt="Image 9">
+    <img src="RESOURCES/shirt/10.jpg" alt="Image 10">
+    <img src="RESOURCES/shirt/11.jpg" alt="Image 11">
+    <img src="RESOURCES/shirt/12.jpg" alt="Image 12">
+    <img src="RESOURCES/shirt/13.jpg" alt="Image 13">
+    <img src="RESOURCES/shirt/14.jpg" alt="Image 15">
+    <img src="RESOURCES/shirt/15.jpg" alt="Image 16">
+    <img src="RESOURCES/shirt/16.jpg" alt="Image 17">
+    <img src="RESOURCES/shirt/17.jpg" alt="Image 18">
+    <img src="RESOURCES/shirt/18.jpg" alt="Image 19">
+    <img src="RESOURCES/shirt/19.jpg" alt="Image 20">
+    <img src="RESOURCES/shirt/20.jpg" alt="Image 21">
+    <img src="RESOURCES/shirt/21.jpg" alt="Image 22">
+    <img src="RESOURCES/shirt/22.jpg" alt="Image 23">
+    <img src="RESOURCES/shirt/23.jpg" alt="Image 24">
+    <img src="RESOURCES/shirt/24.jpg" alt="Image 25">
+    <img src="RESOURCES/shirt/25.jpg" alt="Image 26">
+    <img src="RESOURCES/shirt/26.jpg" alt="Image 27">
+    <img src="RESOURCES/shirt/27.jpg" alt="Image 28">
+    <img src="RESOURCES/shirt/28.jpg" alt="Image 29">
+    <img src="RESOURCES/shirt/29.jpg" alt="Image 30">
+    <img src="RESOURCES/shirt/30.jpg" alt="Image 21">  
+  </div>
+</section>
+<section class="" >
+  <h1 class="text-uppercase fw-bold text-decoration-underline mx-5">Pants</h1>
+  <div class=" carousel2 ">
+    <img src="RESOURCES/pants/1.jpg" alt="Image 1">
+    <img src="RESOURCES/pants/2.jpg" alt="Image 2">
+    <img src="RESOURCES/pants/3.jpg" alt="Image 3">
+    <img src="RESOURCES/pants/4.jpg" alt="Image 4">
+    <img src="RESOURCES/pants/5.jpg" alt="Image 5">
+    <img src="RESOURCES/pants/6.jpg" alt="Image 6">
+    <img src="RESOURCES/pants/7.jpg" alt="Image 7">
+    <img src="RESOURCES/pants/8.jpg" alt="Image 8">
+    <img src="RESOURCES/pants/9.jpg" alt="Image 9">
+    <img src="RESOURCES/pants/10.jpg" alt="Image 10">
+    <img src="RESOURCES/pants/11.jpg" alt="Image 11">
+    <img src="RESOURCES/pants/12.jpg" alt="Image 12">
+    <img src="RESOURCES/pants/13.jpg" alt="Image 14">
+    <img src="RESOURCES/pants/14.jpg" alt="Image 15">
+    <img src="RESOURCES/pants/15.jpg" alt="Image 16">
+    <img src="RESOURCES/pants/16.jpg" alt="Image 17">
+    <img src="RESOURCES/pants/17.jpg" alt="Image 18">
+    <img src="RESOURCES/pants/18.jpg" alt="Image 19">
+    <img src="RESOURCES/pants/19.jpg" alt="Image 20">
+    <img src="RESOURCES/pants/20.jpg" alt="Image 21">
+    <img src="RESOURCES/pants/21.jpg" alt="Image 22">
+    <img src="RESOURCES/pants/22.jpg" alt="Image 23">
+    <img src="RESOURCES/pants/23.jpg" alt="Image 24">
+    <img src="RESOURCES/pants/24.jpg" alt="Image 25">
+    <img src="RESOURCES/pants/25.jpg" alt="Image 26">
+    <img src="RESOURCES/pants/26.jpg" alt="Image 27">
+    <img src="RESOURCES/pants/27.jpg" alt="Image 28">
+    <img src="RESOURCES/pants/28.jpg" alt="Image 29">
+    <img src="RESOURCES/pants/29.jpg" alt="Image 30">
+    <img src="RESOURCES/pants/30.jpg" alt="Image 21">
+    <img src="RESOURCES/pants/31.jpg" alt="Image 22">
+    <img src="RESOURCES/pants/32.jpg" alt="Image 23">
+    <img src="RESOURCES/pants/33.jpg" alt="Image 24">
+    <img src="RESOURCES/pants/34.jpg" alt="Image 25">
+    <img src="RESOURCES/pants/35.jpg" alt="Image 26">
+    <img src="RESOURCES/pants/36.jpg" alt="Image 27">
+    <img src="RESOURCES/pants/37.jpg" alt="Image 28">
+    <img src="RESOURCES/pants/38.jpg" alt="Image 29">
+    <img src="RESOURCES/pants/39.jpg" alt="Image 30">
+    
+  </div>
+</section>
+<p>.</p>
+
+
+  
+</body>
+
+
+<script>
+  AOS.int();
+// Toggle the navbar collapse on click
+$('.navbar-toggler').on('click', function () {
+        $('.navbar-collapse').toggleClass('show');
+    });
+
+    // Add event listener to the search button
+    $('.btn-outline-success').on('click', function (e) {
+        e.preventDefault();
+        // Add your search functionality here
+        console.log('Search button clicked!');
+    });
+
+
+    const carousel1 = document.querySelector('.carousel1');
+const carousel2 = document.querySelector('.carousel2');
+const images1 = carousel1.querySelectorAll('img');
+const images2 = carousel2.querySelectorAll('img');
+let currentImageIndex1 = 0;
+let currentImageIndex2 = 0;
+
+function updateCarousel1() {
+  const imageWidth = images1[0].offsetWidth;
+  const translateX = -imageWidth * currentImageIndex1;
+  carousel1.style.transform = `translateX(${translateX}px)`;
+  currentImageIndex1 = (currentImageIndex1 + 1) % images1.length;
+}
+
+function updateCarousel2() {
+  const imageWidth = images2[0].offsetWidth;
+  const translateX = imageWidth * currentImageIndex2;
+  carousel2.style.transform = `translateX(${translateX}px)`;
+  currentImageIndex2 = (currentImageIndex2 + 1) % images2.length;
+}
+
+function animate() {
+  updateCarousel1();
+  updateCarousel2();
+  requestAnimationFrame(animate);
+}
+
+animate(); // start the animation
+</script>
+</html>
