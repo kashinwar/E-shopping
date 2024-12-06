@@ -1,0 +1,112 @@
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f2c6a0;
+   
+  }
+  .carousel {
+    float: left;
+    display: flex;
+    max-width: max-content;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    animation: moveLeft 55s linear infinite 1s;
+  }
+
+  .carousel:hover {
+    animation-play-state: paused;
+    background-color: #d5ab87;
+  }
+
+  .carousel img {
+    max-width: max-content;
+    height: 35vh;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .carousel2 {
+    max-height: max-content;
+    float: right;
+    display: flex;
+    max-width: max-content;
+    gap: 20px;
+    animation: moveRight 55s linear infinite 1s;
+  }
+  .carousel2:hover {
+    background-color: #d5ab87;
+    animation-play-state: paused;
+  }
+
+  .carousel2 img {
+    width: max-content;
+    height: 35vh;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+header{
+  height: 70px;
+}
+   .navbar {
+    background-color: #eeaf79;
+        top: 0;
+        width: 100%;
+  z-index: 10000;
+
+    }   .form-control {
+        width: 200px;
+    }
+
+  
+
+    /* Media query for small screens */
+    @media (max-width: 768px) {
+        .form-inline {
+            flex-direction: column;
+        }
+
+        .form-control {
+            width: 100%;
+        }
+
+        .icons {
+            margin-top: 1rem;
+        }
+    }
+    .brand {
+    position: fixed;
+    font-size: 7rem;
+    max-width: fit-content;
+    padding: 13.8%;
+    opacity: 0.7;
+    margin-left: 20%;
+
+
+}
+a:hover{
+          color: rgb(22, 14, 106) !important;
+        font-weight: 500;
+        filter: drop-shadow(0 0 10px aqua);
+
+}

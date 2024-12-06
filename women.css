@@ -1,0 +1,107 @@
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #f2c6a0;
+
+}
+.navbar {
+    background-color: #eeaf79;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+
+}
+
+.form-control {
+    width: 200px;
+}
+
+.brand {
+    position: fixed;
+    font-size: 7rem;
+    max-width: fit-content;
+    padding: 13.8%;
+    opacity: 0.7;
+    margin-left: 20%;
+    z-index: -1;
+}
+
+.carousel {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+    
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .carousel-item {
+        position: relative;
+        display: none;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+    }
+    
+    .carousel-item.active {
+        display: block;
+    }
+    
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* Add some basic styling to our navigation buttons */
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .carousel-button:hover {
+        background-color: #ddd;
+    }
+    
+    .carousel-button.prev {
+        left: 10px;
+    }
+    
+    .carousel-button.next {
+        right: 10px;
+    }
+
+.rated{
+    justify-content: space-between;
+    text-align: center;
+    
+}
+.imges{
+    background-color: bisque; 
+    height: 65vh;
+    /* margin-inline-start: 5%; */
+    padding: 5%;
+}
+a {
+    text-decoration: none;
+    list-style: none;
+    color: rgb(255, 255, 255);
+}
+a:hover{
+      color: rgb(22, 14, 106) !important;
+    font-weight: 500;
+    filter: drop-shadow(0 0 10px aqua);
+    
+
+}
